@@ -46,7 +46,7 @@ function playRound(playerChoice) {
   if (roundCount === 3) {
     const finalWinner = playerScore > computerScore ? "Player" : playerScore < computerScore ? "Computer" : "Draw";
     showResult(finalWinner);
-    submitScore("Player", playerScore);  // Submit score to Cloudflare Worker
+    submitScoreToCloudflare("player1", playerScore);  // Example player ID
   }
 }
 
@@ -83,7 +83,7 @@ function resetGame() {
 }
 
 // Submit score to Cloudflare Worker → Firebase
-function submitScore(player, score) {
+function submitScoreToCloudflare(player, score) {
   fetch("https://rps-backend.<your-username>.workers.dev/submitScore", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -92,6 +92,17 @@ function submitScore(player, score) {
     .then((res) => res.text())
     .then((res) => console.log("Score submitted:", res))
     .catch((err) => console.error("Submission failed:", err));
+}
+
+// Fetch score from Cloudflare Worker → Firebase
+function getScoreFromCloudflare(player) {
+  fetch(`https://rps-backend.<your-username>.workers.dev/getScore?player=${player}`)
+    .then((res) => res.json())
+    .then((data) => {
+      console.log("Score data received:", data);
+      // Handle the received score data as needed
+    })
+    .catch((err) => console.error("Error fetching score:", err));
 }
 
 // Game buttons event listeners
