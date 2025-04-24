@@ -46,6 +46,7 @@ function playRound(playerChoice) {
   if (roundCount === 3) {
     const finalWinner = playerScore > computerScore ? "Player" : playerScore < computerScore ? "Computer" : "Draw";
     showResult(finalWinner);
+    submitScore("Player", playerScore);  // Submit score to Cloudflare Worker
   }
 }
 
