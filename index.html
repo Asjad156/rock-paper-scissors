@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href ="styles.css">
+</head>
+<body>
+    <div class="main-heading">
+        Rock Paper and Scissors Game
+    </div>
+    <div class="secondary-text">
+        Let's play the Game.<br>
+        You will have 3 rounds to win against the Computer.
+    </div>
+    <div class="main-container">
+        <div class="buttonDiv">
+            <button id="Rock" class="rockButton">
+                <img src ="Images/rock.png" alt = "Rock">
+            </button>
+        </div>
+
+        <div class="buttonDiv">
+            <button id= "Scissors" class="scissorsButton">
+                <img src="Images/scissors.png" alt="Scissors">
+            </button>
+        </div>
+
+        <div class="buttonDiv">
+            <button id="Paper" class="paperButton">
+                <img src="Images/paper.png" alt="Paper">
+            </button>
+        </div>
+    </div>
+    <div id="status">
+        Status:
+        <div id="status-bar">
+        </div>
+    </div>
+    <div id="scoreBar">
+        Score: <br>
+        <div id="scores">
+            Computer: 0  | Player: 0
+        </div>
+    </div>
+
+    <!-- Result Popup -->
+    <div id="resultPopup"></div>
+</body>
+</html>

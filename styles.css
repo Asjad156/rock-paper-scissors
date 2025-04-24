@@ -1,0 +1,118 @@
+/* Body styling */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Main heading styling */
+.main-heading {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    color: #4CAF50;
+    margin-top: 30px;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Secondary text styling */
+.secondary-text {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 10px;
+    color: #555;
+}
+
+/* Status section */
+#status {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+#status-bar {
+    font-size: 18px;
+    color: #ff5722;
+    font-weight: 300;
+}
+
+/* Score bar styling */
+#scoreBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 30px;
+    color: #333;
+}
+
+/* Container for buttons */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+/* Button div styling */
+.buttonDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Buttons styling */
+.rockButton, .scissorsButton, .paperButton {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.rockButton:hover, .scissorsButton:hover, .paperButton:hover {
+    transform: scale(1.1);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Score display styling */
+#scores {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Pop-up notification styling */
+#resultPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4CAF50;
+    padding: 20px;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
